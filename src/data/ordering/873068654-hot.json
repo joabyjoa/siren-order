@@ -1,0 +1,128 @@
+{
+  "products": [
+    {
+      "starCost": null,
+      "name": "Coffee Traveler - Veranda Blend®",
+      "formCode": "Hot",
+      "productNumber": 873068654,
+      "productType": "beverages",
+      "description": "A convenient carrier filled with 96 fl oz of our brewed Starbucks® Blonde Veranda Blend® (equivalent to 12 8-fl-oz cups), perfect for meetings, picnic gatherings or any occasion that calls for coffee.",
+      "assets": {
+        "thumbnail": { "large": { "uri": null } },
+        "fullSize": { "uri": null },
+        "masterImage": { "uri": "https://globalassets.starbucks.com/assets/0992e70336d7446093fe8d50cb3377f2.jpg" }
+      },
+      "productOptions": [],
+      "sizes": [
+        {
+          "name": "Short",
+          "recipe": { "default": [] },
+          "defaultOptionValues": [],
+          "nutrition": {
+            "servingSize": { "displayName": "Serving Size", "displayValue": " 8 fl oz" },
+            "calories": { "displayName": "Calories", "displayValue": 5 },
+            "caloriesFromFat": { "displayName": "Calories from Fat", "displayValue": 0 },
+            "additionalFacts": [
+              {
+                "displayName": "Total Fat",
+                "unitOfMeasure": "g",
+                "value": 0,
+                "dailyPercentValue": 0,
+                "saturatedFat": { "displayName": "Saturated Fat", "unitOfMeasure": "g", "value": 0, "dailyPercentValue": 0 },
+                "transFat": { "displayName": "Trans Fat", "unitOfMeasure": "g", "value": 0, "dailyPercentValue": null },
+                "id": "totalFat",
+                "displayValue": " 0 g",
+                "dailyValue": null,
+                "subfacts": [
+                  {
+                    "displayName": "Saturated Fat",
+                    "unitOfMeasure": "g",
+                    "value": 0,
+                    "dailyPercentValue": 0,
+                    "id": "saturatedFat",
+                    "displayValue": " 0 g",
+                    "dailyValue": null
+                  },
+                  {
+                    "displayName": "Trans Fat",
+                    "unitOfMeasure": "g",
+                    "value": 0,
+                    "dailyPercentValue": null,
+                    "id": "transFat",
+                    "displayValue": " 0 g",
+                    "dailyValue": null
+                  }
+                ]
+              },
+              {
+                "displayName": "Cholesterol",
+                "unitOfMeasure": "mg",
+                "value": 0,
+                "dailyPercentValue": 0,
+                "id": "cholesterol",
+                "displayValue": " 0 mg",
+                "dailyValue": null
+              },
+              {
+                "displayName": "Sodium",
+                "unitOfMeasure": "mg",
+                "value": 10,
+                "dailyPercentValue": 0.0043,
+                "id": "sodium",
+                "displayValue": " 10 mg",
+                "dailyValue": "0%"
+              },
+              {
+                "displayName": "Total Carbohydrates",
+                "unitOfMeasure": "g",
+                "value": 0,
+                "dailyPercentValue": 0,
+                "dietaryFiber": { "displayName": "Dietary Fiber", "unitOfMeasure": "g", "value": 0, "dailyPercentValue": 0 },
+                "sugars": { "displayName": "Sugars", "unitOfMeasure": "g", "value": 0, "dailyPercentValue": null },
+                "id": "totalCarbs",
+                "displayValue": " 0 g",
+                "dailyValue": null,
+                "subfacts": [
+                  {
+                    "displayName": "Dietary Fiber",
+                    "unitOfMeasure": "g",
+                    "value": 0,
+                    "dailyPercentValue": 0,
+                    "id": "dietaryFiber",
+                    "displayValue": " 0 g",
+                    "dailyValue": null
+                  },
+                  {
+                    "displayName": "Sugars",
+                    "unitOfMeasure": "g",
+                    "value": 0,
+                    "dailyPercentValue": null,
+                    "id": "sugars",
+                    "displayValue": " 0 g",
+                    "dailyValue": null
+                  }
+                ]
+              },
+              { "displayName": "Protein", "unitOfMeasure": "g", "value": 1, "id": "protein", "displayValue": " 1 g", "dailyValue": null },
+              {
+                "displayName": "Caffeine",
+                "unitOfMeasure": "mg",
+                "value": 180,
+                "dailyPercentValue": null,
+                "maximum": { "displayName": "Caffeine Range", "unitOfMeasure": "mg", "value": 0, "dailyPercentValue": null },
+                "id": "caffeine",
+                "displayValue": " 180 mg",
+                "dailyValue": null
+              }
+            ]
+          },
+          "sizeCode": "Short",
+          "sku": "11045091",
+          "default": true,
+          "allergens": { "shouldDisplay": true, "text": "" },
+          "ingredients": [{ "name": "BREWED COFFEE.", "children": [] }]
+        }
+      ]
+    }
+  ]
+}

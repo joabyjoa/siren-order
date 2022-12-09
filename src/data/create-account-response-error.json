@@ -1,0 +1,7 @@
+{
+  "type": "validation",
+  "field": "emailAddress",
+  "messageId": "unavailableEmailError",
+  "cardType": "digitalCard",
+  "errorCode": "111000"
+}
