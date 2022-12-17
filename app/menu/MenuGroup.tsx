@@ -1,7 +1,13 @@
 'use client'
 
+import styled from 'styled-components'
 import Menu from './Menu'
 import { MenuElement } from './types'
+
+const GroupName = styled.h3`
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+`
 
 type Props = {
   data: MenuElement
@@ -10,14 +16,10 @@ type Props = {
 export default function MenuGroup({ data }: Props) {
   return (
     <div key={data.id}>
-      <h3>{data.name}</h3>
-      <ul>
-        {data.children.map((item) => (
-          <li key={item.id}>
-            <Menu data={item} />
-          </li>
-        ))}
-      </ul>
+      <GroupName>{data.name}</GroupName>
+      {data.children.map((item) => (
+        <Menu key={item.id} data={item} />
+      ))}
     </div>
   )
 }

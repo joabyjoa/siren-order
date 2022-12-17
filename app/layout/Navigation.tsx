@@ -34,8 +34,12 @@ type Props = {
 export default function Navigation({ shows, onLinkClick }: Props) {
   return (
     <>
-      <Mask animate={{ opacity: shows ? 0.38 : 0 }} transition={{ type: 'spring' }}></Mask>
-      <Wrap animate={{ x: shows ? 0 : '100%' }} transition={{ ease: 'easeOut' }}>
+      <Mask
+        initial={{ opacity: 0, display: 'none' }}
+        animate={{ opacity: shows ? 0.38 : 0, display: shows ? 'block' : 'none' }}
+        transition={{ type: 'spring' }}
+      />
+      <Wrap animate={{ x: shows ? 0 : '100%' }} transition={{ ease: 'easeOut' }} initial={{ x: '100%' }}>
         <Link href="/menu" onClick={onLinkClick}>
           메뉴
         </Link>

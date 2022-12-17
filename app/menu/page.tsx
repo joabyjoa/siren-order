@@ -10,11 +10,10 @@ export default async function MenuPage() {
   const { menus } = await fetchMenu()
 
   return (
-    <div>
-      <h2>Menu</h2>
+    <>
       {menus.map((data) => (
         <MenuGroup key={data.id} data={data} />
       ))}
-    </div>
+    </>
   )
 }

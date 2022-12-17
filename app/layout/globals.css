@@ -14,13 +14,11 @@ body {
 }
 
 html {
-  font-size: 62.5%;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
-  font-size: 1.4rem;
   color: black;
   background: white;
 }
@@ -38,4 +36,8 @@ body {
 a,
 button {
   color: inherit;
+}
+
+a {
+  text-decoration: none;
 }
