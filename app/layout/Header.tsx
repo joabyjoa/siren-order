@@ -23,7 +23,7 @@ const Wrap = styled.header`
 `
 
 export default function Header() {
-  const [showsNavigation, setShowNavigation] = useState(true)
+  const [showsNavigation, setShowNavigation] = useState(false)
   const closeNavigation = () => setShowNavigation(false)
 
   return (
