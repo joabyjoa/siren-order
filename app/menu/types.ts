@@ -18,7 +18,7 @@ export interface Product {
   productNumber: number
   productType: ProductType
   availability: Availability
-  assets: Assets
+  assets?: Assets
   sizes: Size[]
   uri: string
 }
