@@ -1,15 +1,11 @@
-const handleGetReviews = () => {
-  // Client-side request are mocked by `mocks/browser.ts`.
-  fetch('https://api.com/user').then((res) => res.json())
-}
+'use client'
 
-export default async function Home() {
-  const reviews: any = await handleGetReviews()
-  return (
-    <>
-      Home
-      {/* <button onClick={handleGetReviews}>dd</button> */}
-      {reviews?.username}
-    </>
-  )
+import styled from 'styled-components'
+
+const Wrap = styled.div`
+  background: blue;
+`
+
+export default function Home() {
+  return <Wrap>Home</Wrap>
 }
