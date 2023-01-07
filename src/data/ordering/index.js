@@ -1,8 +1,6 @@
-import { camelCase, isFunction, set as _set } from "@/utils/index"
-import { getMockProductResponses } from "@/lib/next/parse-hars"
-import { filterOrderingRequest } from "@/lib/next/parse-hars/filters"
-import logger from "@/utils/logger"
-const log = logger()
+import { camelCase, isFunction, set as _set } from 'lodash'
+import { getMockProductResponses } from './utils/parse-hars'
+import { filterOrderingRequest } from './utils/parse-hars/filters'
 
 // errors
 // todo(chores) - not used.
@@ -13,7 +11,7 @@ const getFilenameCamelCased = (name) => camelCase(name)
 
 // `modulePathsHandler` functions
 const handleHarModulePaths = (modulePaths, requireFn, aTarget) => {
-  if (!isFunction(requireFn)) return handleArgumentIsNotFunctionError("requireFn")
+  if (!isFunction(requireFn)) return handleArgumentIsNotFunctionError('requireFn')
   const target = aTarget || {}
   for (const modulePath of modulePaths) {
     const result = /^\.\/(?<filename>.*)\.har\.json/.exec(modulePath)
@@ -28,7 +26,7 @@ const handleHarModulePaths = (modulePaths, requireFn, aTarget) => {
 }
 
 const handleOrderingModulePaths = (modulePaths, requireFn, aTarget) => {
-  if (!isFunction(requireFn)) return handleArgumentIsNotFunctionError("requireFn")
+  if (!isFunction(requireFn)) return handleArgumentIsNotFunctionError('requireFn')
   const target = aTarget || {}
   for (const modulePath of modulePaths) {
     const result = /^\.\/(?<filename>.*)\.json/.exec(modulePath)
@@ -36,7 +34,7 @@ const handleOrderingModulePaths = (modulePaths, requireFn, aTarget) => {
 
     const filename = result.groups.filename
     if (!filename) continue
-    const [id, hotOrIce] = filename.split("-")
+    const [id, hotOrIce] = filename.split('-')
     const setPath = `['${id}'].${hotOrIce}`
     const value = requireFn(modulePath)
     _set(target, setPath, value)
@@ -46,18 +44,18 @@ const handleOrderingModulePaths = (modulePaths, requireFn, aTarget) => {
 
 // todo(refactor) - into one `importAll` function with parameters
 const importAllHarFiles = (modulePathsHandler = handleHarModulePaths) => {
-  if (!isFunction(modulePathsHandler)) return handleArgumentIsNotFunctionError("modulePathsHandler")
-  const requireFn = require.context("../hars", false, /\.har\.json$/)
-  const modulePaths = requireFn.keys().filter((key) => key.startsWith("./"))
+  if (!isFunction(modulePathsHandler)) return handleArgumentIsNotFunctionError('modulePathsHandler')
+  const requireFn = require.context('../hars', false, /\.har\.json$/)
+  const modulePaths = requireFn.keys().filter((key) => key.startsWith('./'))
   const modules = modulePathsHandler(modulePaths, requireFn)
   return modules
 }
 
 // todo(refactor) - into one `importAll` function with parameters
 const importAllOrderingFiles = (modulePathsHandler = handleOrderingModulePaths) => {
-  if (!isFunction(modulePathsHandler)) return handleArgumentIsNotFunctionError("modulePathsHandler")
-  const requireFn = require.context("./", false, /\.json$/)
-  const modulePaths = requireFn.keys().filter((key) => key.startsWith("./"))
+  if (!isFunction(modulePathsHandler)) return handleArgumentIsNotFunctionError('modulePathsHandler')
+  const requireFn = require.context('./', false, /\.json$/)
+  const modulePaths = requireFn.keys().filter((key) => key.startsWith('./'))
   const modules = modulePathsHandler(modulePaths, requireFn)
   return modules
 }
@@ -78,7 +76,7 @@ loopModules(harModules, (key, value) => {
 })
 
 const parseProductId = (id) => {
-  return id.split("-")
+  return id.split('-')
 }
 
 const parseProductResponses = (responses) => {
@@ -114,11 +112,11 @@ const traverseObject = (maxDepth = 1) => {
   return function traverse(data, depth = 0) {
     const keys = Object.keys(data)
     for (const i in keys) {
-      if (depth <= maxDepth && typeof data[keys[i]] === "object") {
+      if (depth <= maxDepth && typeof data[keys[i]] === 'object') {
         cur.push(keys[i])
         traverse(data[keys[i]], depth + 1)
       } else {
-        acc.push([cur.join("."), data])
+        acc.push([cur.join('.'), data])
         cur = []
       }
     }

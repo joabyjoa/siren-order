@@ -6,7 +6,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ['globalassets.starbucks.com'],
+    domains: ['globalassets.starbucks.com', 'www.starbucks.com'],
   },
   webpack: (config) => {
     config.module.rules.push({

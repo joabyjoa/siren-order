@@ -1,3 +1,5 @@
+import { SizeCode } from '../types'
+
 export interface Ordering {
   products: OrderingProduct[]
 }
@@ -63,12 +65,12 @@ export enum FormCode {
 }
 
 export interface FormSize {
-  sizeCode: SizeCode
+  sizeCode: FormSizeCode
   name: string
   sku: string
 }
 
-export enum SizeCode {
+export enum FormSizeCode {
   Add = 'add',
   Extra = 'extra',
   Light = 'light',
@@ -82,7 +84,7 @@ export interface ProductSize {
   recipe: Recipe
   defaultOptionValues: any[]
   nutrition: Nutrition
-  sizeCode: string
+  sizeCode: SizeCode
   sku: string
   default: boolean
   allergens: Allergens
@@ -167,7 +169,7 @@ export interface Default {
   productOption: DefaultProductOption
   formCode: FormCode
   quantity: number
-  sizeCode: SizeCode
+  sizeCode: FormSizeCode
   skuName: SkuName
 }
 
